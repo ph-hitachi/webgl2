@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+    const canvas = document.createElement("canvas");
+    const gl = canvas.getContext("webgl");
+
+    // Allocate a large number of textures, leading to memory exhaustion
+    for (let i = 0; i < 10000; i++) {
+        const texture = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1000, 1000, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+
+        // No release of textures or buffers, simulating memory leak
+    }
+
+    setInterval(() => {
+        console.log("Allocating memory without releasing resources...");
+    }, 500);
+});
+</script>
+</head>
+<body>
+    <h1>WebGL Memory Leak Demonstration</h1>
+</body>

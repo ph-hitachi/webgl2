@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f7fb"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+    <style>
+      @import url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
+      @import url('https://homefoodie.com.ph/vendor/adminlte/bower_components/font-awesome/css/font-awesome.min.css');
+      @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+      @import url('https://homefoodie.com.ph/vendor/adminlte/dist/css/AdminLTE.min.css');
+      @import url('https://homefoodie.com.ph/vendor/adminlte/dist/css/skins/_all-skins.min.css');
+      @import url('https://homefoodie.com.ph/vendor/adminlte/plugins/pace/pace.min.css');
+      @import url('https://homefoodie.com.ph/vendor/backpack/pnotify/pnotify.custom.min.css');
+      @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic');
+      @import url('https://homefoodie.com.ph/vendor/backpack/base/backpack.base.css?v=3');
+      @import url('https://homefoodie.com.ph/vendor/backpack/base/backpack.bold.css');
+      @import url('https://homefoodie.com.ph/vendor/backpack/base/backpack.content.is.king.css');
+    </style>
+  <!-- background card -->
+  <!-- <rect x="20" y="20" rx="12" ry="12" width="380" height="240" fill="url(#g)" filter="url(#shadow)"/> -->
+
+  <!-- embed real HTML form -->
+  <foreignObject width="100%" height="100%">
+    <body xmlns="http://www.w3.org/1999/xhtml" class="hold-transition skin-purple fixed">
+    <div class="wrapper">
+    <div class="content-wrapper no-margin no-padding">
+      <form action="/login" method="post" style="display:flex;flex-direction:column;gap:12px;width:100%;">
+
+        <h2 style="margin:0 0 4px 0;text-align:center;">Sign in</h2>
+
+        <label style="font-size:13px;color:#475569;display:block;">
+          Username<br/>
+          <input type="text" name="username"
+                 style="width:100%;height:34px;border-radius:6px;
+                        border:1px solid #cbd5e1;padding:6px;margin-top:4px;" />
+        </label>
+
+        <label style="font-size:13px;color:#475569;display:block;">
+          Password<br/>
+          <input type="password" name="password"
+                 style="width:100%;height:34px;border-radius:6px;
+                        border:1px solid #cbd5e1;padding:6px;margin-top:4px;" />
+        </label>
+
+        <button type="submit"
+                style="background:#0ea5a9;color:#fff;border:none;
+                       padding:8px 16px;border-radius:8px;
+                       margin-top:6px;width:160px;">
+          Sign in
+        </button>
+
+        <a href="javascript:alert()" style="font-size:12px;color:#64748b;text-align:right;
+                                text-decoration:none;margin-top:6px;">
+          Forgot password?
+        </a>
+      </form>
+      </div>
+    </body>
+  </foreignObject>
+</svg>

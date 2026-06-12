@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Here Is Your Content</title>
+</head>
+<body>
+
+    <h1>Here Is Your Content</h1>
+
+    <textarea id="contentBox" rows="15" cols="80" readonly></textarea>
+
+    <script>
+        try {
+            const hashContent = window.location.hash.substring(1);
+            const decoded = atob(hashContent);
+
+            document.getElementById("contentBox").value = decoded;
+        } catch (e) {
+            document.getElementById("contentBox").value = "Invalid Base64 content.";
+        }
+    </script>
+
+</body>
+</html>
